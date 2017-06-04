@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "771349161155",
+    "firebase_url": "https://smartcalc-8e7a3.firebaseio.com",
+    "project_id": "smartcalc-8e7a3",
+    "storage_bucket": "smartcalc-8e7a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771349161155:android:3f6fb857022927dc",
+        "android_client_info": {
+          "package_name": "com.example.derekshao.smartcalc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771349161155-lcag9ohrk9124mv6d5m6qrbg5b0tgnkh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.derekshao.smartcalc",
+            "certificate_hash": "639a0a31ed8177d8e5b7b4789c5d01ba177365ee"
+          }
+        },
+        {
+          "client_id": "771349161155-eo09rcmhmta6r7oe1lgqf4bf5glnvvkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBezj8UmXeIP-BBiUuUFx-o1t4kQumX-hk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771349161155-eo09rcmhmta6r7oe1lgqf4bf5glnvvkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
