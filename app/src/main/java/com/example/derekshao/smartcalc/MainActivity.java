@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)view;
         switch (button.getId()) {
             case R.id.numpad_equals:
-                if (dataPushed == false && enableDatabase == true) {
+                if (dataPushed && enableDatabase) {
 
                     DateFormat dateFormat = new SimpleDateFormat("MM/dd HH:mm");
                     Date date = new Date();
