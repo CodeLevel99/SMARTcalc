@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -13,108 +14,26 @@
         android:layout_gravity="fill"
         android:layout_width="match_parent"
         android:gravity="right"
-        android:inputType="text"
         android:maxLines="1"
-        android:textSize="30dp"
-        android:text="0"
-        />
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:text="@string/calculator_default" />
+
+    <Button
+        android:id="@+id/numpad_del"
+        android:onClick="registerClick"
+        android:text="C"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_height="60dp" />
 
     <Button
         android:id="@+id/numpad_clear"
         android:onClick="registerClick"
-        android:text="Clr" />
-
-
-    <com.example.derekshao.smartcalc.OperatorButton
-        android:id="@+id/numpad_divide"
-        android:layout_column="3"
-        android:onClick="registerClick"
-        android:text="/" />
-
-    <Button
-        android:id="@+id/numpad_1"
-        android:onClick="registerClick"
-        android:text="1" />
-
-    <Button
-        android:id="@+id/numpad_2"
-        android:onClick="registerClick"
-        android:text="2" />
-
-    <Button
-        android:id="@+id/numpad_3"
-        android:onClick="registerClick"
-        android:text="3" />
-
-    <com.example.derekshao.smartcalc.OperatorButton
-        android:id="@+id/numpad_multiply"
-        android:onClick="registerClick"
-        android:text="x" />
-
-    <Button
-        android:id="@+id/numpad_4"
-        android:onClick="registerClick"
-        android:text="4" />
-
-    <Button
-        android:id="@+id/numpad_5"
-        android:onClick="registerClick"
-        android:text="5" />
-
-    <Button
-        android:id="@+id/numpad_6"
-        android:onClick="registerClick"
-        android:text="6" />
-
-    <com.example.derekshao.smartcalc.OperatorButton
-        android:id="@+id/numpad_minus"
-        android:onClick="registerClick"
-        android:text="-" />
-
-    <Button
-        android:id="@+id/numpad_7"
-        android:onClick="registerClick"
-        android:text="7" />
-
-    <Button
-        android:id="@+id/numpad_8"
-        android:onClick="registerClick"
-        android:text="8" />
-
-    <Button
-        android:id="@+id/numpad_9"
-        android:onClick="registerClick"
-        android:text="9" />
-
-    <com.example.derekshao.smartcalc.OperatorButton
-        android:id="@+id/numpad_plus"
-        android:onClick="registerClick"
-        android:text="+" />
-
-    <Button
-        android:id="@+id/numpad_0"
-        android:layout_gravity="fill"
-        android:onClick="registerClick"
-        android:text="0" />
-
-    <com.example.derekshao.smartcalc.OperatorButton
-        android:id="@+id/numpad_decimal"
-        android:onClick="registerClick"
-        android:text="." />
-
-    <Button
-        android:id="@+id/numpad_sign_change"
-        android:onClick="registerClick"
-        android:text="+/-"
-        android:layout_row="5"
-        android:layout_column="2" />
-
-    <Button
-        android:id="@+id/numpad_equals"
-        android:onClick="registerClick"
-        android:text="="
-        android:layout_row="5"
-        android:layout_column="3" />
+        android:text="Clr"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_height="60dp" />
 
     <com.example.derekshao.smartcalc.OperatorButton
         android:id="@+id/numpad_power"
@@ -122,13 +41,118 @@
         android:text="^"
         android:textAllCaps="false"
         android:layout_row="1"
-        android:layout_column="2" />
-    <Button
-        android:id="@+id/numpad_del"
-        android:onClick="registerClick"
-        android:text="C"
+        android:layout_column="2"
+        android:layout_height="60dp" />
+
+    <com.example.derekshao.smartcalc.OperatorButton
+        android:id="@+id/numpad_divide"
         android:layout_row="1"
-        android:layout_column="1"
-        />
+        android:layout_column="3"
+        android:onClick="registerClick"
+        android:text="/"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_1"
+        android:onClick="registerClick"
+        android:text="1"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_2"
+        android:onClick="registerClick"
+        android:text="2"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_3"
+        android:onClick="registerClick"
+        android:text="3"
+        android:layout_height="60dp" />
+
+    <com.example.derekshao.smartcalc.OperatorButton
+        android:id="@+id/numpad_multiply"
+        android:onClick="registerClick"
+        android:text="x"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_4"
+        android:onClick="registerClick"
+        android:text="4"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_5"
+        android:onClick="registerClick"
+        android:text="5"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_6"
+        android:onClick="registerClick"
+        android:text="6"
+        android:layout_height="60dp" />
+
+    <com.example.derekshao.smartcalc.OperatorButton
+        android:id="@+id/numpad_minus"
+        android:onClick="registerClick"
+        android:text="-"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_7"
+        android:onClick="registerClick"
+        android:text="7"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_8"
+        android:onClick="registerClick"
+        android:text="8"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_9"
+        android:onClick="registerClick"
+        android:text="9"
+        android:layout_height="60dp" />
+
+    <com.example.derekshao.smartcalc.OperatorButton
+        android:id="@+id/numpad_plus"
+        android:onClick="registerClick"
+        android:text="+"
+        android:layout_height="60dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/numpad_0"
+        android:layout_gravity="fill"
+        android:onClick="registerClick"
+        android:text="0"
+        android:layout_height="60dp" />
+
+    <com.example.derekshao.smartcalc.OperatorButton
+        android:id="@+id/numpad_decimal"
+        android:onClick="registerClick"
+        android:text="."
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_sign_change"
+        android:onClick="registerClick"
+        android:text="+/-"
+        android:layout_row="5"
+        android:layout_column="2"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/numpad_equals"
+        android:onClick="registerClick"
+        android:text="="
+        android:layout_row="5"
+        android:layout_column="3"
+        android:layout_height="60dp" />
+
 
 </GridLayout>

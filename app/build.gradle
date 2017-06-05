@@ -35,6 +35,9 @@ dependencies {
     //firebase
     compile 'com.google.firebase:firebase-core:10.2.1'
     compile 'com.google.firebase:firebase-database:10.2.1'
+
+    //android support design library
+    compile 'com.android.support:design:25.3.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -1,6 +1,7 @@
 package com.example.derekshao.smartcalc;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<MathExp> expressions = new ArrayList<>();
     private boolean dataPushed = false;//prevent multiple copies of same expression being pushed to database
     private boolean operatorInserted = false;//prevents input with operators next to each other
+    private boolean enableDatabase = true;//check if user wants to store equations in database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.historyItem:
                 Intent intent = new Intent(this, ExpressionDatabaseActivity.class);
                 startActivityForResult(intent, SELECT_EQUATION);
+                break;
+            case R.id.enableDatabaseItem:
+                if (enableDatabase == true) {
+                    item.setIcon(R.drawable.ic_menu_dont_save);
+                    enableDatabase = false;
+                    Snackbar.make(findViewById(R.id.activity_main), "Does not store equations.", Snackbar.LENGTH_LONG).show();
+                }
+                else {
+                    item.setIcon(R.drawable.ic_menu_save);
+                    enableDatabase = true;
+                    Snackbar.make(findViewById(R.id.activity_main), "Stores equations.", Snackbar.LENGTH_LONG).show();
+                }
                 break;
             default:
                 return super.onOptionsItemSelected(item);
@@ -201,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)view;
         switch (button.getId()) {
             case R.id.numpad_equals:
-                if (dataPushed == false) {
+                if (dataPushed == false && enableDatabase == true) {
 
                     DateFormat dateFormat = new SimpleDateFormat("MM/dd HH:mm");
                     Date date = new Date();

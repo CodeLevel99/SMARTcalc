@@ -3,21 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.0_a9a6ce7246eed128398df66910acab0a825d9e18\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="888983f51cf34f57a93ff16832552f2f15937212">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.2.1_29921691ba10d135ad190e6e75cf1f1e07dc523c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.3.1_b4f2982922df0361bfbcdfe3d39dffa1fb67eb5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.1_4ccf985a9973d654a11ac1607c52e5a1d4a4580a\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -30,39 +39,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.0\jars\classes.jar"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.0_fd88b663dbafbf162e38db4cddb88fc1868383b9\classes.dex" />
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.3.1_bbcc1dcdacd747f78705292b3488d7145524949e\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.0\jars\classes.jar"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.1.0_7c758c025d7097bd8bc4e61c5df2239a516ace69\classes.dex" />
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.3.1_20f68dafb0a8eb27c96f297b6a87b19e63a462f3\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.0\jars\classes.jar"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.0_bd5fdb30e0bc7325f8e320b7d2fafd1f722d4d82\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.1.0_9bbdf8c920dba02438b3eb03c222e3952f640c46\classes.dex" />
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.1_8ba6ce256650b4ef4888fb720b2f37e929a62233\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,21 +79,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-<<<<<<< HEAD
-        sha1="4e3b289f565639b77b7f48cca99b33845a2265e4">
-=======
-        sha1="7d5bb99050565b676b4edcd9d50308e63402e4e6">
->>>>>>> refs/remotes/origin/master
+        sha1="81640af3a242dea22157a3996ef7bef369458957">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c5e726b3d684c9f9ec7112c9771248f7ef6d26e8\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.0\jars\classes.jar"
+        jar="C:\Users\Derek Shao\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.1.0_f5e54dcf4f7a30b547f24c21e9a6f8eae401f673\classes.dex" />
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_af83ee2be968126fd59f57312198a890d73e98d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.1_1db6b43a111aa8c3ac2fc5d5609525d993568e87\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -106,33 +111,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.0_3eb8b6c3becd9dde8f98a764ab1e05aad2d8c619\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Derek Shao\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.0\support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.0_1e9051d57be5f9118ee66582e43a4d43b77ccea1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.0_47c7f01296415bb7f9c2fc0914bc82d68a122a7b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -142,12 +120,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.0\jars\classes.jar"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.0_0ca00f581a07815ef34a81e9853680170945cb5d\classes.dex" />
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.3.1_a928ffacddf6d7780e50dbd0802feee0f7eaa87b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.1_0e39a23e020f96e3b37ec67bc31c23c68d0eacec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.3.1_92e83fd67a6dfb42230c662044792d7abe257af7\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -160,12 +156,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.3.1_355c02290e450bca1510c0031abbe412ee17e5b1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.2.1_64584e3ec20e0dc84ec3a02728a10c9bf2761e95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.3.1_268497e6458ddae14affd7fe01de162197ef6cb5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.3.1_7f570baff3be9e61da4aa0fbd4983251753b64e0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -182,11 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-<<<<<<< HEAD
-        sha1="bf40fa3de0804d1596e1098b57c8f51197284b1d">
-=======
-        sha1="51eb613c81da78f45930cbce5fd338d846b8cdd7">
->>>>>>> refs/remotes/origin/master
+        sha1="9ff5954995f93ff0f6522f2805e5f9340872ca58">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_93668a1b0d952aa5be08e77a0591edf981cc6c21\classes.dex" />
     </item>
 
