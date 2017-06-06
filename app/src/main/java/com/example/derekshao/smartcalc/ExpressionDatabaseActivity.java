@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,7 +47,27 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("expressions");
 
-        attachDatabaseReadListener();
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    implementList();
+                    attachDatabaseReadListener();
+                }
+                else {
+                    Toast.makeText(ExpressionDatabaseActivity.this, "No equations stored.",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void implementList() {
 
         arrayOfMathExp = new ArrayList<>();
 
@@ -59,6 +78,7 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         detector = new GestureDetector(this, new MyGestureDetector());
+
         View.OnTouchListener gestureListener = new View.OnTouchListener()  {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -67,7 +87,6 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
         };
 
         listView.setOnTouchListener(gestureListener);
-
     }
 
     private void myOnItemClick(int position) {
@@ -109,7 +128,6 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
                     Log.e("smartcalc", databaseError.getMessage());
-
                 }
             });
 
@@ -123,6 +141,10 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+
+        if (mChildEventListener != null) {
+            mDatabaseReference.removeEventListener(mChildEventListener);
+        }
     }
 
     private void attachDatabaseReadListener() {
@@ -137,24 +159,21 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
 
                 @Override
                 public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
                 }
 
                 @Override
                 public void onChildRemoved(DataSnapshot dataSnapshot) {
                     MathExp expRemoved = dataSnapshot.getValue(MathExp.class);
                     String expression = expRemoved.getEquation();
-                    Toast.makeText(ExpressionDatabaseActivity.this, expression + " removed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ExpressionDatabaseActivity.this, expression + " removed.", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
                 }
 
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
-
                 }
             };
         }

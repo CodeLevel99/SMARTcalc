@@ -79,7 +79,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="81640af3a242dea22157a3996ef7bef369458957">
+        sha1="40637d52ab27bf71cfb884f24e4b15475228c5e9">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_c5e726b3d684c9f9ec7112c9771248f7ef6d26e8\classes.dex" />
     </item>
     <item
@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="9ff5954995f93ff0f6522f2805e5f9340872ca58">
+        sha1="1767cd1221f007bb7a874702b2af6af0191bb719">
         <dex dex="C:\Users\Derek Shao\AndroidStudioProjects\smartcalc\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_93668a1b0d952aa5be08e77a0591edf981cc6c21\classes.dex" />
     </item>
 

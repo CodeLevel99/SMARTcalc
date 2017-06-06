@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
     //java
     private HashMap<String, Integer> prec = new HashMap<>();
-    private ArrayList<MathExp> expressions = new ArrayList<>();
     private boolean dataPushed = false;//prevent multiple copies of same expression being pushed to database
     private boolean operatorInserted = false;//prevents input with operators next to each other
     private boolean enableDatabase = true;//check if user wants to store equations in database
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, SELECT_EQUATION);
                 break;
             case R.id.enableDatabaseItem:
-                if (enableDatabase == true) {
+                if (enableDatabase) {
                     item.setIcon(R.drawable.ic_menu_dont_save);
                     enableDatabase = false;
                     Snackbar.make(findViewById(R.id.activity_main), "Does not store equations.", Snackbar.LENGTH_LONG).show();
@@ -215,13 +214,12 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button)view;
         switch (button.getId()) {
             case R.id.numpad_equals:
-                if (dataPushed && enableDatabase) {
+                if (!dataPushed && enableDatabase) {
 
                     DateFormat dateFormat = new SimpleDateFormat("MM/dd HH:mm");
                     Date date = new Date();
 
                     final MathExp mathExpression = new MathExp(inputField.getText().toString(), dateFormat.format(date));
-                    expressions.add(mathExpression);
 
                     mFirebaseReference.push().setValue(mathExpression);
 
@@ -251,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
             default:
                 dataPushed = false;
                 if (view instanceof OperatorButton) {
-                    if (!inputField.getEditableText().toString().equals("0") && operatorInserted == false) {
+                    if (!inputField.getEditableText().toString().equals("0") && !operatorInserted) {
                         inputField.append(button.getText().toString());
                         operatorInserted = true;
                     }
