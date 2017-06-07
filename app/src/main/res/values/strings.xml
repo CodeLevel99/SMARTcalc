@@ -3,4 +3,6 @@
     <string name="menu_enable_database">Enable Database</string>
     <string name="menu_history">History</string>
     <string name="calculator_default">0</string>
+    <string name="equation_here">Equation Here</string>
+    <string name="date_here">Date Here</string>
 </resources>
