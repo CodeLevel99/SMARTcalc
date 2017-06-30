@@ -7,28 +7,21 @@
         android:id="@+id/expDisplay"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Equation Here"
-        android:textSize="20sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toEndOf="@+id/dateDisplay"
+        android:text="@string/equation_here"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="textEnd" />
 
     <TextView
         android:id="@+id/dateDisplay"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Date Here"
-        android:textSize="20sp"
         android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="gone"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/date_here"
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -15,10 +15,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Stack;
-import java.util.HashMap;
+
+import static com.example.derekshao.smartcalc.ExpressionEvaluator.infix;
+import static com.example.derekshao.smartcalc.ExpressionEvaluator.postfix_evaluate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mFirebaseReference;
 
     //java
-    private HashMap<String, Integer> prec = new HashMap<>();
     private boolean dataPushed = false;//prevent multiple copies of same expression being pushed to database
     private boolean operatorInserted = false;//prevents input with operators next to each other
     private boolean enableDatabase = true;//check if user wants to store equations in database
@@ -44,13 +43,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         inputField = (TextView)findViewById(R.id.input_field);
-
-        //operator precedence
-        prec.put("^", 5);
-        prec.put("x", 4);
-        prec.put("/", 3);
-        prec.put("-", 2);
-        prec.put("+", 1);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseReference = mFirebaseDatabase.getReference().child("expressions");
@@ -89,125 +81,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private boolean isHigher(String c, String topStack) {
+    public String calculate(String expression) {
 
-        //if the operator on top of stack is higher or equal than operator scanned, return true
-        return prec.get(topStack) >= prec.get(c);
-    }
-
-    public ArrayList<String> infix() {
-
-        String infix = inputField.getText().toString();
-
-        //remove all white spaces
-        infix = infix.replaceAll("\\s", "");
-
-        //split each character from string into an array
-        String [] infixString = infix.split("(?!^)");
-
-        Stack<String> stack= new Stack<String>();
-        ArrayList<String> postfix = new ArrayList<String>();
-
-        String curNumber = "";
-
-        for (String c : infixString) {
-
-            //if character c is an operator
-            if (prec.containsKey(c)) {
-
-                //if curNumber == "0", the expression contains an operator as its first character
-                if (curNumber.equals("")) {
-                    curNumber = "0";
-                }
-
-                //curNumber currently contains set of numbers, add to postfix string
-                postfix.add(curNumber);
-                //reset curNumber string for next set of numbers after the operator
-                curNumber = "";
-
-                while (!stack.isEmpty() && isHigher(c, stack.peek())) {
-                    //if new operator is higher than the current operator at top of stack
-
-                    postfix.add(stack.pop());
-                }
-                stack.push(c);
-            }
-            else {
-                //c is an operand or decimal, concat with curNumber string
-                curNumber = curNumber.concat(c);
-            }
-        }
-
-        //add the remaining number
-        if (curNumber != null && !curNumber.isEmpty()) {
-            postfix.add(curNumber);
-        }
-
-        //add the remaining operators
-        while (!stack.isEmpty()) {
-            postfix.add(stack.pop());
-        }
-
-        return postfix;
-    }
-
-    public void postfix_evaluate() {
-        //postfix evaluator
-
-        ArrayList<String> postfix = infix();
-
-        Stack<String> post = new Stack<String>();
-
-        for (String n : postfix) {
-
-            if (prec.containsKey(n)) {
-
-                String topStack = post.pop();
-
-                double retVal = 0;
-
-                switch(n) {
-                    case "^":
-                        retVal = Math.pow(Double.parseDouble(post.pop()), Double.parseDouble(topStack));
-                        break;
-                    case "x":
-                        retVal = Double.parseDouble(post.pop()) * Double.parseDouble(topStack);
-                        break;
-                    case "+":
-                        retVal = Double.parseDouble(post.pop()) + Double.parseDouble(topStack);
-                        break;
-                    case "-":
-                        retVal = Double.parseDouble(post.pop()) -  Double.parseDouble(topStack);
-                        break;
-                    case "/":
-                        retVal = Double.parseDouble(post.pop()) / Double.parseDouble(topStack);
-                        break;
-                    default:
-                        break;
-                }
-
-                post.push(Double.toString(retVal));
-            }
-            else {
-                //operand
-                post.push(n);
-            }
-        }
-
-        //final calculated value
-        String finalValue = post.peek();
-
-        //removes decimal point if .0
-        if (finalValue.charAt(finalValue.length() - 1) == '0' && finalValue.charAt(finalValue.length() - 2) == '.') {
-            inputField.setText(finalValue.substring(0, finalValue.length() - 2));
-        }
-        else {
-            inputField.setText(finalValue);
-        }
-    }
-
-    public void calculate() {
-        postfix_evaluate();
+        return postfix_evaluate(infix(expression));
     }
 
     public void registerClick(View view) {
@@ -227,7 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 dataPushed = true;
 
                 if (!operatorInserted && inputField.getEditableText().toString().length() > 1) {
-                    calculate();
+
+                    String evaluated = calculate(inputField.getText().toString());
+
+                    inputField.setText(evaluated);
                 }
                 break;
             case R.id.numpad_clear:

@@ -2,7 +2,10 @@ package com.example.derekshao.smartcalc;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import com.example.derekshao.smartcalc.MainActivity;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -10,8 +13,14 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+    MainActivity mainActivity = new MainActivity();
+
+    private final static String BedmasCheck = "9+3x5-5";
+
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void BEDMASCheck() {
+
+        assertEquals(mainActivity.calculate(BedmasCheck), "19");
     }
 }
