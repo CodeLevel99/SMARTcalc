@@ -47,24 +47,8 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child("expressions");
 
-        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    implementList();
-                    attachDatabaseReadListener();
-                }
-                else {
-                    Toast.makeText(ExpressionDatabaseActivity.this, "No equations stored.",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        implementList();
+        attachDatabaseReadListener();
     }
 
     private void implementList() {
@@ -76,6 +60,8 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
 
         listView.setAdapter(adapter);
+
+        listView.setEmptyView(findViewById(R.id.emptyView));
 
         detector = new GestureDetector(this, new MyGestureDetector());
 
@@ -90,7 +76,7 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
     }
 
     private void myOnItemClick(int position) {
-
+        //gets equation at position clicked and passes equation back to main activity
         MathExp expression = (MathExp)listView.getItemAtPosition(position);
 
         Intent result = new Intent();
@@ -103,6 +89,7 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
 
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
+            //saves the position of item clicked
             int pos = listView.pointToPosition((int)e.getX(), (int)e.getY());
             myOnItemClick(pos);
             return super.onSingleTapUp(e);
@@ -110,6 +97,7 @@ public class ExpressionDatabaseActivity extends AppCompatActivity {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            //onFling: deletes the selected equation
 
             int pos = listView.pointToPosition((int)e1.getX(),(int)e1.getY());
 

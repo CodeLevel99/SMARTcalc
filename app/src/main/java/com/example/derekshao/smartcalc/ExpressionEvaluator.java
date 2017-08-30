@@ -60,7 +60,7 @@ public class ExpressionEvaluator {
                 curNumber = "";
 
                 while (!stack.isEmpty() && isHigher(c, stack.peek())) {
-                    //if new operator is higher than the current operator at top of stack
+                    //if the operator at top of stack is higher precedence than the new operator
 
                     postfix.add(stack.pop());
                 }

@@ -5,4 +5,5 @@
     <string name="calculator_default">0</string>
     <string name="equation_here">Equation Here</string>
     <string name="date_here">Date Here</string>
+    <string name="empty_view">There are no equations currently stored.\n Go back and start calculating!</string>
 </resources>

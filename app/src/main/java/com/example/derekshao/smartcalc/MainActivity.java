@@ -23,10 +23,10 @@ import static com.example.derekshao.smartcalc.ExpressionEvaluator.postfix_evalua
 public class MainActivity extends AppCompatActivity {
 
     //request codes
-    static final int SELECT_EQUATION = 1;
+    public static final int SELECT_EQUATION = 1;
 
     //views
-    TextView inputField;
+    private TextView inputField;
 
     //firebase
     private FirebaseDatabase mFirebaseDatabase;
