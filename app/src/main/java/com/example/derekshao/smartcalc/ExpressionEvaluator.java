@@ -10,9 +10,14 @@ import java.util.Stack;
 
 public class ExpressionEvaluator {
 
-    private static HashMap<String, Integer> prec = new HashMap<>();
+    private HashMap<String, Integer> prec = new HashMap<>();
 
-    private static void addOperatorPrec() {
+    public ExpressionEvaluator() {
+
+        addOperatorPrec();
+    }
+
+    private void addOperatorPrec() {
 
         //initialize operator precedence
         prec.put("^", 5);
@@ -22,16 +27,14 @@ public class ExpressionEvaluator {
         prec.put("+", 1);
     }
 
-    private static boolean isHigher(String c, String topStack) {
+    private boolean isHigher(String c, String topStack) {
 
         //if the operator on top of stack is higher or equal than operator scanned, return true
         return prec.get(topStack) >= prec.get(c);
     }
 
 
-    public static ArrayList<String> infix(String infixString) {
-
-        addOperatorPrec();
+    public ArrayList<String> infix(String infixString) {
 
         //remove all white spaces
         infixString = infixString.replaceAll("\\s", "");
@@ -73,7 +76,7 @@ public class ExpressionEvaluator {
         }
 
         //add the remaining number
-        if (curNumber != null && !curNumber.isEmpty()) {
+        if (!curNumber.isEmpty()) {
             postfix.add(curNumber);
         }
 
@@ -85,7 +88,7 @@ public class ExpressionEvaluator {
         return postfix;
     }
 
-    public static String postfix_evaluate(ArrayList<String> postfix) {
+    public String postfix_evaluate(ArrayList<String> postfix) {
         //postfix evaluator
 
         Stack<String> post = new Stack<String>();

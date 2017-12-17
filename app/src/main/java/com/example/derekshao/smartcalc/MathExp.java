@@ -1,15 +1,9 @@
 package com.example.derekshao.smartcalc;
 
-import java.util.ArrayList;
-
 public class MathExp {
 
     private String equation;
     private String date;
-
-    public MathExp() {
-
-    }
 
     public MathExp(String exp, String date) {
         this.equation = exp;
@@ -23,6 +17,4 @@ public class MathExp {
     public String getDate() {
         return date;
     }
-
-
 }

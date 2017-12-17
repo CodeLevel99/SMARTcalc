@@ -17,9 +17,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.example.derekshao.smartcalc.ExpressionEvaluator.infix;
-import static com.example.derekshao.smartcalc.ExpressionEvaluator.postfix_evaluate;
-
 public class MainActivity extends AppCompatActivity {
 
     //request codes
@@ -37,12 +34,16 @@ public class MainActivity extends AppCompatActivity {
     private boolean operatorInserted = false;//prevents input with operators next to each other
     private boolean enableDatabase = true;//check if user wants to store equations in database
 
+    private ExpressionEvaluator expEval;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         inputField = (TextView)findViewById(R.id.input_field);
+
+        expEval = new ExpressionEvaluator();
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mFirebaseReference = mFirebaseDatabase.getReference().child("expressions");
@@ -83,7 +84,9 @@ public class MainActivity extends AppCompatActivity {
 
     public String calculate(String expression) {
 
-        return postfix_evaluate(infix(expression));
+        System.out.println(expEval.postfix_evaluate(expEval.infix(expression)));
+
+        return expEval.postfix_evaluate(expEval.infix(expression));
     }
 
     public void registerClick(View view) {
