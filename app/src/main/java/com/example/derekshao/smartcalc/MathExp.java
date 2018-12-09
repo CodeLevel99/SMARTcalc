@@ -10,6 +10,10 @@ public class MathExp {
         this.date = date;
     }
 
+    public MathExp() {
+
+    }
+
     public String getEquation() {
         return equation;
     }
